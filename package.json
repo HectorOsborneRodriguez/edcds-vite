@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "chromatic": "chromatic"
   },
   "author": "",
   "license": "ISC",
@@ -20,12 +21,16 @@
     "@storybook/react": "^7.5.3",
     "@storybook/react-vite": "^7.5.3",
     "@storybook/testing-library": "^0.2.2",
+    "chromatic": "^8.0.0",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "sass": "^1.69.5",
     "storybook": "^7.5.3"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^7.5.3"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "edcds-vite@1.0.0"
 }

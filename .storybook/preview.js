@@ -15,6 +15,7 @@ const preview = {
 
 import { withThemeByDataAttribute } from '@storybook/addon-themes';
 import "../src/index.css";
+import "../src/variables.scss";
 
 
 export const decorators =  [
