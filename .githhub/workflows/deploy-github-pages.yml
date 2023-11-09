@@ -8,6 +8,10 @@ on:
   push:
     branches:
       - 'main' # Replace with the branch you want to deploy from
+  # Run on  Pull Requests closed
+  pull_request:
+    types:
+      - closed
 
 permissions:
   contents: read
@@ -16,6 +20,12 @@ permissions:
 
 # List of jobs
 jobs:
+  if_merged:
+    if: github.event.pull_request.merged == true
+      runs-on: ubuntu-latest
+    steps:
+      - run: |
+        echo The PR was merged!
   deploy:
     runs-on: ubuntu-latest
     # Job steps
