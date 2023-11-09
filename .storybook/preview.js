@@ -10,6 +10,17 @@ const preview = {
         date: /Date$/i,
       },
     },
+    html: {
+      prettier: {
+        tabWidth: 4,
+        useTabs: false,
+        htmlWhitespaceSensitivity: "strict",
+        printWidth: 600,
+        bracketLine: true,
+        showLineNumbers: true, // default: false
+        wrapLines: false, // default: true
+      },
+    },
   },
 };
 
@@ -28,20 +39,5 @@ export const decorators =  [
     attributeName: 'data-theme'
   }),
 ];
-
-
-// import { withThemeByClassName } from "@storybook/addon-themes";
-
-// // import "../src/tailwind.css";
-
-// export const decorators = [
-//   withThemeByClassName({
-//     themes: {
-//       light: "light",
-//       dark: "dark",
-//     },
-//     defaultTheme: "light",
-//   }),
-// ];
 
 export default preview;
