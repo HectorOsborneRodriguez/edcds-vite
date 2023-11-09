@@ -1,13 +1,15 @@
 # .github/workflows/deploy-github-pages.yaml
 
 # Workflow name
-name: Build and Publish Storybook to GitHub Pages
+name: Build and Publish Storybook to GitHub Pages only when PRs are approved to main branch
 
 on:
-  # Event for the workflow to run on
-  push:
+  # Run on  Pull Requests closed
+  pull_request:
+    types:
+      - closed
     branches:
-      - 'main' # Replace with the branch you want to deploy from
+      - main
 
 permissions:
   contents: read
@@ -16,10 +18,13 @@ permissions:
 
 # List of jobs
 jobs:
-  deploy:
+  if_merged:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
-    # Job steps
     steps:
+      - run: |
+        echo The PR was merged!
+
       # Manual Checkout
       - uses: actions/checkout@v3
 
