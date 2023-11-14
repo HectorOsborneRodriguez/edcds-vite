@@ -20,7 +20,9 @@ This repository has been created using:
 
 
 
-Automated integration has been done in "/main" branch.
+Automated integration has been done in "/main" branch and git hub actions. Whe a developer pushes code to /main, two actions are triggered:
+1. Updates Chromatic
+2. Deploys a github page
 
 
 ### Run Storybook
@@ -31,7 +33,7 @@ Use Storybook to read documentation and see the available components
 npm run storybook
 ```
 
-### Publish your Storybook to 
+### Publish your Storybook to Chromatic
 
 On the command line, publish to Chromatic’s secure CDN for the first time with the following command:
 
