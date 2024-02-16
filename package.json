@@ -29,7 +29,7 @@
     "react-dom": "^18.2.0",
     "react-syntax-highlighter": "^15.5.0",
     "sass": "^1.69.5",
-    "storybook": "^7.5.3"
+    "storybook": "^6.5.16"
   },
   "dependencies": {
     "@storybook/addon-a11y": "^7.5.3"
